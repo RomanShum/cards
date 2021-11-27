@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Card from "./components/Card";
+import "bootstrap/dist/css/bootstrap.min.css";
+import img from "./components/img/img.png";
 
 function App() {
+  const arr1 = {
+    img: img,
+    title: "Card title",
+    content:
+      "Some quick example text to build on the card title and make up the bulk of the card's content.",
+    button: "Go somewhere",
+    alt: "alt",
+    href: "#",
+  };
+
+  const arr2 = {
+    title: "Card title",
+    content:
+      "Some quick example text to build on the card title and make up the bulk of the card's content.",
+    button: "Go somewhere",
+    alt: "alt",
+    href: "#",
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Card {...arr1} />
+      <Card {...arr2} />
     </div>
   );
 }
